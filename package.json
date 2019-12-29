@@ -1,0 +1,39 @@
+{
+  "peerDependencies": {
+    "react": "^16.12.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-rem": "^4.0.0",
+    "eslint-config-xo-react": "^0.20.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^3.1.0",
+    "lint-staged": "^10.0.0-beta.14",
+    "prettier": "^1.19.1",
+    "xo": "^0.25.3"
+  },
+  "xo": {
+    "extends": [
+      "xo-react",
+      "rem",
+      "plugin:prettier/recommended",
+      "prettier/react"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "xo --fix"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
+  }
+}
